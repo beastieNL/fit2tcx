@@ -20,8 +20,10 @@ BEGIN {
   }
 
   eval $expr if $expr ne '';
-}
 
+  push @INC, './';
+
+}
 use Garmin::FIT;
 
 $debug = 0 if !defined $debug;
